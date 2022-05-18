@@ -1,12 +1,13 @@
 package br.com.naldo.awsimageupload.datastore;
 
 import br.com.naldo.awsimageupload.profile.UserProfile;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-
+@Repository
 public class FakeUserProfileDataStore {
 
     public static final List<UserProfile> USER_PROFILES = new ArrayList<>();

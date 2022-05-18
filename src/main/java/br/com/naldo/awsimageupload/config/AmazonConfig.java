@@ -12,13 +12,15 @@ import org.springframework.context.annotation.Configuration;
 public class AmazonConfig {
 
     @Bean
-    public AmazonS3 s3(){
+    public AmazonS3 s3() {
         AWSCredentials awsCredentials = new BasicAWSCredentials(
-                "AKIA5T3YFDZIEAZCKGII",
-                "enlk79s58AggyAPpygmBVE+MU5MyiGXZ9H5TMTaZ");
+                "AKIA5T3YFDZICONHS57E",
+                "GKSQgA7bpmJJN/tiiYRaFe3RLGXc77GFlnEhZiS9"
+        );
         return AmazonS3ClientBuilder
                 .standard()
                 .withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
+                .withRegion("sa-east-1")
                 .build();
     }
 
