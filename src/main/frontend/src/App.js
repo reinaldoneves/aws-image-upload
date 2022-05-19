@@ -10,10 +10,12 @@ const UserProfiles = () => {
     });
   };
 
-  userEffect(() => {
+  useEffect(() => {
     fetchUserProfiles();
   }, []);
-}
+
+  return <h1>Fora Bozo;</h1>
+};
 
 function App() {
   return (
