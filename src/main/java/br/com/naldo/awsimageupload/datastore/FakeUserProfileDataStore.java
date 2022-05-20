@@ -14,15 +14,15 @@ public class FakeUserProfileDataStore {
 
     static {
         USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "Naldo", null));
-        USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "James Hetfield", null));
-        USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "Kirk Hammett", null));
-        USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "Lars Ulrich", null));
-        USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "Robert Trujillo", null));
-        USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "Steve Vai", null));
+        USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "Letiere Leite", null));
+        USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "Moacir Santos", null));
+        USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "Pixinguinha", null));
+        USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "Jacob do Bandolim", null));
+        USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "Raphael Rabello", null));
         USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "John Bonham", null));
-        USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "John Paul Jones", null));
-        USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "Jimmy Page", null));
-        USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "Robert Plant", null));
+        USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "Altamiro Carrilho", null));
+        USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "Stravinsky", null));
+        USER_PROFILES.add(new UserProfile(UUID.randomUUID(), "Guinga", null));
     }
 
     public List<UserProfile> getUserProfiles() {
