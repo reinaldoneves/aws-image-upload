@@ -26,6 +26,8 @@ public class UserProfileService {
     }
 
     List<UserProfile> getUserProfiles(){
+        System.out.println("\nCrap debugging");
+        System.out.println("\n ######################### \n Getting all user profiles");
         return userProfileDataAccessService.getUserProfiles();
     }
 
@@ -39,7 +41,9 @@ public class UserProfileService {
      */
     public void uploadUserProfileImage(UUID userProfileId, MultipartFile file) {
 
-        System.out.println("Uploading file " + file.getOriginalFilename());
+        System.out.println("\nCrap debugging");
+        System.out.println("\n ######################### \n Uploading user profile image");
+
         //TODO: 1 - Check if image isnt empty
         isThisFileEmpty(file);
 
@@ -87,8 +91,9 @@ public class UserProfileService {
     }
 
     private void isThisFileAnImage(MultipartFile file) {
-        if(!Arrays.asList(ContentType.IMAGE_JPEG, IMAGE_PNG, IMAGE_GIF).contains(file.getContentType()))
-            throw new IllegalStateException("Image must be jpeg, png or gif");
+        if(!Arrays.asList(ContentType.IMAGE_JPEG.getMimeType(), ContentType.IMAGE_PNG.getMimeType(), ContentType.IMAGE_GIF.getMimeType())
+                .contains(file.getContentType()))
+            throw new IllegalStateException("Image must be jpeg, png or gif [" + file.getContentType() + "]");
     }
 
     private void isThisFileEmpty(MultipartFile file) {

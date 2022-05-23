@@ -10,7 +10,6 @@ import java.util.UUID;
 
 /***
  * @author reinaldo_neves@hotmail.com
- * Continua daqui: https://youtu.be/i-hoSg8iRG0?t=2505
  */
 @RestController
 @RequestMapping("api/v1/user-profile")
