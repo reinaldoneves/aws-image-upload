@@ -39,12 +39,29 @@ const UserProfiles = () => {
 
 function Dropzone() {
   const onDrop = useCallback(acceptedFiles => {
-    // Do something with the files
-    //Call the post methodo on our api to upload to S3
+
     const file = acceptedFiles[0];
     console.log(file);
-  }, [])
-  const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
+    
+    const formData = new FormData();
+    formData.append("file", file);
+
+    axios.post(
+      `http://localhost:8080/api/v1/user-profile/{userProfileId}/image/upload`,
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data"
+        }
+      }
+    ).then(() => {
+      console.log("file uploaded succesfully")
+    }).catch(err => {
+      console.log(err);
+    });
+
+  }, []);
+  const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop});
 
   return (
     <div {...getRootProps()}>
