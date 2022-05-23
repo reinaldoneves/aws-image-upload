@@ -32,8 +32,8 @@ public class UserProfileService {
     }
 
     /***
-     * Go to Front end and implement that stuff
-     * https://youtu.be/i-hoSg8iRG0?t=2960
+     * TODO: Dowload the image and show in the profile
+     * https://youtu.be/i-hoSg8iRG0?t=6820
      * @param userProfileId
      * @param file
      *
@@ -61,7 +61,7 @@ public class UserProfileService {
                 BucketName.PROFILE_IMAGE.getBucketName(),
                 user.getUserProfileId());
 
-        String filename = String.format("%s-%s", file.getName(),
+        String filename = String.format("%s-%s", file.getOriginalFilename(),
                 UUID.randomUUID());
 
         try {
