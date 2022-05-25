@@ -30,14 +30,14 @@ const UserProfiles = () => {
           <br />
           <h1>{userProfile.username}</h1>
           <p>{userProfile.userProfileId}</p>
-          <Dropzone />
+          <Dropzone {... userProfile} />
           <br />
         </div>
     );
   });
 };
 
-function Dropzone() {
+function Dropzone({ userProfileId }) {
   const onDrop = useCallback(acceptedFiles => {
 
     const file = acceptedFiles[0];
@@ -47,7 +47,7 @@ function Dropzone() {
     formData.append("file", file);
 
     axios.post(
-      `http://localhost:8080/api/v1/user-profile/{userProfileId}/image/upload`,
+      `http://localhost:8080/api/v1/user-profile/${userProfileId}/image/upload`,
       formData,
       {
         headers: {

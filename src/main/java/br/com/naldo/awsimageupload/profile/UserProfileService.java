@@ -99,4 +99,20 @@ public class UserProfileService {
     private void isThisFileEmpty(MultipartFile file) {
         if(file.isEmpty()) throw new IllegalStateException("Cannot upload empty file [ " + file.getSize() + " ]");
     }
+
+    /***
+     * TODO: Dowload the image and show in the profile - https://youtu.be/i-hoSg8iRG0?t=7709
+     * @param userProfileId
+     * @return
+     */
+    public byte[] downloadUserProfileImage(UUID userProfileId) {
+        UserProfile user = getUserProfile(userProfileId);
+        String path = String.format("%s/%s",
+                BucketName.PROFILE_IMAGE.getBucketName(),
+                user.getUserProfileId());
+
+        return user.getUserProfileImageLink()
+                .map(key -> fileStore.download(path, key))
+                .orElse(new byte[0]);
+    }
 }
