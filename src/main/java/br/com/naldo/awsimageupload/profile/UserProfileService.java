@@ -36,8 +36,6 @@ public class UserProfileService {
      * https://youtu.be/i-hoSg8iRG0?t=6820
      * @param userProfileId
      * @param file
-     *
-     * TODO: Continuar daqui https://youtu.be/i-hoSg8iRG0?t=5374
      */
     public void uploadUserProfileImage(UUID userProfileId, MultipartFile file) {
 
