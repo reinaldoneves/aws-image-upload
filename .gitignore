@@ -19,6 +19,10 @@ target/
 *.iml
 *.ipr
 
+# WARNING: Exclude this class from the repo
+# if you want to preserve your AWS credentials, or find another way to store them.
+# src/main/java/br/com/naldo/awsimageupload/config/AmazonConfig.java
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -31,4 +35,4 @@ build/
 
 ### VS Code ###
 .vscode/
-src/main/java/br/com/naldo/awsimageupload/config/AmazonConfig.java
+

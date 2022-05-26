@@ -1,8 +1,7 @@
 package br.com.naldo.awsimageupload.bucket;
 
 public enum BucketName {
-
-    PROFILE_IMAGE("naldosbucket-image-upload-321");
+    PROFILE_IMAGE("[YOUR_BUCKET_NAME]");
 
     private String bucketName;
 
